@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Registration {% endblock %}
+
+{% block info %}
+    <h1>Enter the fields</h1>
+    <form method="post">
+            {% csrf_token %}
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="title">Title</span>
+            </div>
+            {{ form.title }}<br>
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="description">Description</span>
+        </div>
+        {{ form.description }}<br>
+
+        <button type="submit" class="btn btn-primary btn-sm">Add</button>
+    </form>
+
+{% endblock %}
+
