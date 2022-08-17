@@ -6,21 +6,30 @@ from .forms import PostForm
 from .models import Post
 
 
-def give_help(request):
+def register(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home_page')
+            return redirect('warning')
         else:
             print('[ERROR]')
     form = PostForm()
+
     context = {
         'form': form
     }
-    return render(request, 'main/give_help.html', context)
+    return render(request, 'main/register.html', context)
 
 
 def home_page(request):
     post = Post.objects.all()
     return render(request, 'main/home_page.html', {'post': post})
+
+
+def warning(request):
+    return render(request, 'main/warning.html')
+
+
+def index(request):
+    return render(request, 'main/index.html')
