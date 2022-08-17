@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main/base.html' %}
+
+{% block title %} Registration {% endblock %}
+
+{% block info %}
     <h1>Thanks for ready to help</h1>
     <form method="post">
         {% csrf_token %}
@@ -12,5 +10,4 @@
         {{ form.description }}<br>
         <button type="submit">Add</button>
     </form>
-</body>
-</html>
+{% endblock %}
