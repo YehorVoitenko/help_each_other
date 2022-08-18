@@ -17,7 +17,12 @@ Help page
     {% for item in post %}
         <dir class='alert alert-warning mt-2'>
             <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
+            <p>{{ item.description }}</p><br>
+            <dir class="container">
+                <p> - {{ item.name }} {{ item.surname }}</p>
+                <p> - Telephone number: {{ item.telephone_number }}</p>
+                <p> - City: {{ item.city }}</p>
+            </dir>
         </dir>
     {% endfor %}
 {% endblock %}
