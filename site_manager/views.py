@@ -15,7 +15,6 @@ def register(request):
         else:
             print('[ERROR]')
     form = PostForm()
-
     context = {
         'form': form
     }
@@ -23,7 +22,7 @@ def register(request):
 
 
 def home_page(request):
-    post = Post.objects.all()
+    post = Post.objects.order_by('-id')
     return render(request, 'main/home_page.html', {'post': post})
 
 
