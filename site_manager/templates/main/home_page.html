@@ -15,14 +15,18 @@ Help page
 {% block info %}
     <h1>We can help you</h1>
     {% for item in post %}
-        <dir class='alert alert-warning mt-2'>
+        <div class='alert alert-warning mt-2'>
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p><br>
-            <dir class="container">
+            <div class="container">
                 <p> - {{ item.name }} {{ item.surname }}</p>
                 <p> - Telephone number: {{ item.telephone_number }}</p>
                 <p> - City: {{ item.city }}</p>
-            </dir>
-        </dir>
+                <div align="left">
+                <img src="{{ item.image.url }}" class="rounded float-left" width="500" height="600"  position="relative">
+                    </div>
+            </div>
+        </div>
+
     {% endfor %}
 {% endblock %}

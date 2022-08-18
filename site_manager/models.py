@@ -13,7 +13,7 @@ class Post(models.Model):
     city = models.CharField('Enter city, you live', max_length=50, null=False)
     key_help_words = models.CharField('Enter your telephone number', max_length=50, null=False)
 
-    image = models.ImageField()
+    image = models.ImageField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
