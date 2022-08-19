@@ -1,12 +1,12 @@
 from .models import Post
-from django.forms import ModelForm, TextInput, Textarea, ImageField
+from django.forms import ModelForm, TextInput, Textarea, ImageField, ClearableFileInput
 
 
 class PostForm(ModelForm):
     class Meta:
         model = Post
         fields = ['name', 'surname', 'telephone_number',
-                  'title', 'description', 'city', 'key_help_words']
+                  'title', 'description', 'city', 'key_help_words', 'image']
 
         widgets = {
             'name': TextInput(attrs={
@@ -51,4 +51,6 @@ class PostForm(ModelForm):
                'class': "form-control",
                'id': 'key_help_words'
                    }),
+
+            'image': ClearableFileInput()
         }

@@ -4,7 +4,7 @@
 
 {% block info %}
     <h1>Enter the fields</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -50,6 +50,10 @@
                 <span class="input-group-text" id="key_help_words">Key words</span>
             </div>
             {{ form.key_help_words }}<br>
+        </div>
+
+        <div class="input-group mb-3" id="image">
+            {{ form.image }}<br>
         </div>
 
         <button type="submit" class="btn btn-primary btn-sm">Add</button>

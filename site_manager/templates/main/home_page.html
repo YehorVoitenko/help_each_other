@@ -12,20 +12,19 @@ Help page
 </nav>
 {% endblock %}
 
+# TODO: ADD CAROUSEL BOOTSTRAP
+
 {% block info %}
-    <h1>We can help you</h1>
     {% for item in post %}
-        <div class='alert alert-dark'>
-                    <img src="{{ item.image.url }}" class="rounded float-left"
-                         width="16%" align="right">
+        <div class='alert alert-dark mb-3'>
+            <img src="{{ item.image.url }}" class="rounded float-left"
+                 width="15.7%" align="right" id="image">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p><br>
             <div class="container">
-                <p> - {{ item.name }} {{ item.surname }}
-
-                </p>
-                <p> - Telephone number: {{ item.telephone_number }}</p>
-                <p> - City: {{ item.city }}</p>
+                <p> - {{ item.name }} {{ item.surname }}</p>
+                <p><b>- Telephone number: </b> {{ item.telephone_number }}</p>
+                <p><b>- City: </b> {{ item.city }}</p>
 
             </div>
         </div>
