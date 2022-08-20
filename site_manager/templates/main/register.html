@@ -10,52 +10,45 @@
             <div class="input-group-prepend">
             <span class="input-group-text" id="name">Name</span>
             </div>
-        {{ form.name }}<br>
+        {{ form.name }}
         </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="surname">Surname</span>
             </div>
-        {{ form.surname }}<br>
+        {{ form.surname }}
         </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text" id="telephone_number">Telephone number</span>
             </div>
-        {{ form.telephone_number }}<br>
+            {{ form.telephone_number }}
         </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
+                <span class="input-group-text" id="city">City</span>
+            </div>
+            {{ form.city }}
+        </div>
+<br>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
                 <span class="input-group-text" id="title">Title</span>
             </div>
-            {{ form.title }}<br>
+            {{ form.title }}
         </div>
 
         <div class="input-group-prepend">
             <span class="input-group-text" id="description">Description</span>
         </div>
-        {{ form.description }}<br>
-
-  <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="city">City</span>
-            </div>
-            {{ form.city }}<br>
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="key_help_words">Key words</span>
-            </div>
-            {{ form.key_help_words }}<br>
-        </div>
-
+        {{ form.description }}
+<br>
         <div class="input-group mb-3" id="image">
-            {{ form.image }}<br>
+            {{ form.image }}
         </div>
-
         <button type="submit" class="btn btn-primary btn-sm">Add</button>
     </form>
 

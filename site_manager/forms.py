@@ -6,7 +6,7 @@ class PostForm(ModelForm):
     class Meta:
         model = Post
         fields = ['name', 'surname', 'telephone_number',
-                  'title', 'description', 'city', 'key_help_words', 'image']
+                  'title', 'description', 'city', 'image']
 
         widgets = {
             'name': TextInput(attrs={
@@ -22,6 +22,8 @@ class PostForm(ModelForm):
             }),
 
             'telephone_number': TextInput(attrs={
+                "type": "tel",
+                "patter": "[0-9]{3}-[0-9]{2}-[0-9]{3}",
                 'placeholder': 'Enter your telephone number',
                 'class': "form-control",
                 'id': 'telephone_number'
@@ -44,12 +46,6 @@ class PostForm(ModelForm):
                'placeholder': "Enter city, you live",
                'class': "form-control",
                'id': 'city'
-                   }),
-
-            'key_help_words': TextInput(attrs={
-               'placeholder': "A few key words, for easier search example: table, chair, toys",
-               'class': "form-control",
-               'id': 'key_help_words'
                    }),
 
             'image': ClearableFileInput()

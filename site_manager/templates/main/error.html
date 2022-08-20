@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Registration {% endblock %}
+
+{% block warning %}
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Error!</h4>
+      <p>Oooooh, something went wrong :( </p><br>
+      <p class="mb-0">Go back and enter the fields correctly and carefully</p>
+      <hr>
+      <p class="mb-0">Example:</p>
+        <p class="mb-0"><b>-Name: </b>Mikola [symbols]</p>
+        <p class="mb-0"><b>-Surname: </b>Stepanenko [symbols]</p>
+        <p class="mb-0"><b>-Telephone number: </b>380951233456 [numbers] or this number was registered</p>
+        <p class="mb-0"><b>-Title :</b>Table [symbols/numbers]</p>
+        <p class="mb-0"><b>-Description: </b>Some description [symbols/numbers]</p>
+        <p class="mb-0"><b>-City: </b>Lviv [symbols]</p>
+    </div>
+  <a type="button" href="{%url = 'home_page'%}">gdfkjdhg</a>
+{% endblock %}

@@ -1,8 +1,7 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Help page
-
+Help each other
 {% endblock %}
 
 {% block header %}
@@ -13,14 +12,13 @@ Help page
 {% endblock %}
 
 # TODO: ADD CAROUSEL BOOTSTRAP
-
 {% block info %}
     {% for item in post %}
         <div class='alert alert-dark mb-3'>
             <img src="{{ item.image.url }}" class="rounded float-left"
-                 width="15.7%" align="right" id="image">
+                 width="265" height="265" align="right" id="image">
             <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p><br>
+            <p tex>{{ item.description }}</p><br>
             <div class="container">
                 <p><b>- Name: </b> {{ item.name }}</p>
                 <p><b>- Surname: </b> {{ item.surname }}</p>

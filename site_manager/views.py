@@ -13,7 +13,7 @@ def register(request):
             form.save()
             return redirect('warning')
         else:
-            print('[ERROR]')
+            return redirect('error')
     form = PostForm()
     context = {
         'form': form
@@ -30,5 +30,5 @@ def warning(request):
     return render(request, 'main/warning.html')
 
 
-def index(request):
-    return render(request, 'main/index.html')
+def error(request):
+    return render(request, 'main/error.html')
